@@ -38,4 +38,4 @@ Loading site… done
 
 ## Deployment
 
-Each commit to master is deployed automatically via Netlify through the dnsimple-deploy account.
+Each commit to master is deployed automatically via Netlify.
