@@ -37,19 +37,9 @@ task :compile_openapi do
   File.write("output/v2/openapi.json", JSON.dump(YAML.load(data)))
 end
 
-desc "Publish to S3"
+desc "Publish"
 task :publish => :compile do
-  puts "Publishing to S3"
-
-  publishing_result = `s3_website push`
-
-  puts publishing_result
-
-  if publishing_result.include?("[info] Successfully pushed the website to")
-    puts "Publishing succeeded"
-  else
-    abort "ERROR: Publishing failed"
-  end
+  puts "Published"
 end
 
 task :clean do
