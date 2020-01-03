@@ -18,6 +18,8 @@
   <![endif]-->
 
   <%= render "analytics" %>
+
+  <link rel="canonical" href="<%= @config[:base_url] %><%= @item.path %>" />
 </head>
 
 <body>
